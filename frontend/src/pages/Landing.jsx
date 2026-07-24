@@ -56,7 +56,9 @@ const S = {
     zIndex: 1000,
     padding: '24px 16px',
     overflowY: 'auto',
-    background: 'rgba(0,0,0,0.72)',
+    background: 'rgba(15, 23, 42, 0.52)',
+    backdropFilter: 'blur(5px)',
+    WebkitBackdropFilter: 'blur(5px)',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'flex-start',
@@ -65,6 +67,13 @@ const S = {
     width: '100%',
     maxWidth: '640px',
     margin: '32px 0',
+    background: '#ffffff',
+    border: '1px solid #e2e8f0',
+    borderRadius: '20px',
+    padding: '32px',
+    gap: '24px',
+    color: '#0f172a',
+    boxShadow: '0 24px 64px rgba(15, 23, 42, 0.28)',
   },
   card: {
     background: 'rgba(255,255,255,0.03)',
@@ -85,9 +94,9 @@ const S = {
     width: '100%',
     padding: '14px 18px',
     borderRadius: 'var(--radius-md)',
-    background: 'rgba(0,0,0,0.3)',
-    border: '1px solid var(--border)',
-    color: '#fff',
+    background: '#ffffff',
+    border: '1px solid #cbd5e1',
+    color: '#0f172a',
     fontSize: '0.95rem',
     outline: 'none',
   },
@@ -95,9 +104,9 @@ const S = {
     width: '100%',
     padding: '14px 18px',
     borderRadius: 'var(--radius-md)',
-    background: 'rgba(0,0,0,0.3)',
-    border: '1px solid var(--border)',
-    color: '#fff',
+    background: '#ffffff',
+    border: '1px solid #cbd5e1',
+    color: '#0f172a',
     fontSize: '0.95rem',
     outline: 'none',
     minHeight: '100px',
@@ -107,7 +116,7 @@ const S = {
   label: {
     fontSize: '0.85rem',
     fontWeight: 600,
-    color: 'var(--text-muted)',
+    color: '#475569',
     display: 'flex',
     flexDirection: 'column',
     gap: '6px',
@@ -215,6 +224,7 @@ export default function Landing() {
         onClick={() => !loading && setShowRegistrationForm(false)}
       >
         <div
+          className="registration-modal"
           style={{ ...S.card, ...S.modal }}
           onClick={(event) => event.stopPropagation()}
           role="dialog"
@@ -225,7 +235,7 @@ export default function Landing() {
           <div style={{ fontSize: '2rem' }}>📋</div>
           <div>
             <h2 id="registration-form-title" style={{ fontSize: '1.4rem', fontWeight: 700 }}>Lead Registration Form</h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
               Fill in customer details to analyze, score, and store the lead in the Admin Dashboard.
             </p>
           </div>
@@ -234,7 +244,7 @@ export default function Landing() {
             aria-label="Close registration form"
             onClick={() => setShowRegistrationForm(false)}
             disabled={loading}
-            style={{ marginLeft: 'auto', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', fontSize: '1.5rem' }}
+            style={{ marginLeft: 'auto', background: 'none', border: 'none', color: '#475569', cursor: 'pointer', fontSize: '1.5rem' }}
           >
             ×
           </button>
@@ -254,7 +264,7 @@ export default function Landing() {
             />
           </label>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+          <div className="registration-field-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
             <label style={S.label}>
               Email Address
               <input
@@ -305,7 +315,7 @@ export default function Landing() {
 
           <button
             type="submit"
-            className="btn btn-ghost"
+            className="btn registration-submit"
             style={{ width: '100%', padding: '16px', fontSize: '1rem', marginTop: '8px' }}
             disabled={loading}
           >

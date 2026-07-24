@@ -125,6 +125,45 @@ body::before {
   color: var(--text-primary);
 }
 
+/* Light registration modal */
+.registration-modal input:focus,
+.registration-modal textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.14);
+}
+
+.registration-modal input::placeholder,
+.registration-modal textarea::placeholder {
+  color: #94a3b8;
+}
+
+.registration-submit {
+  background: #4f46e5;
+  color: #ffffff;
+  border: 1px solid #4f46e5;
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.22);
+}
+
+.registration-submit:hover:not(:disabled) {
+  background: #4338ca;
+  border-color: #4338ca;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .registration-modal {
+    margin: 12px 0 !important;
+    padding: 24px 18px !important;
+    border-radius: 16px !important;
+  }
+
+  .registration-field-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+}
+
 /* ── Animations ──────────────────────────────── */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(12px); }
