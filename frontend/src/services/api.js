@@ -4,7 +4,8 @@
  * Consistent error handling, no duplicated fetch logic.
  */
 
-const BASE_URL = '/api'; // Proxied to http://localhost:8000 by Vite
+// VITE_API_URL may override this in a deployment environment.
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://lead-collection-backend.onrender.com/api';
 
 async function request(method, path, body = null) {
   const options = {

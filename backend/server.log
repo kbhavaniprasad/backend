@@ -108,3 +108,10 @@
 12:26:54  INFO      database — SQLite database ready: voice_agent.db
 12:26:54  INFO      main — ✅ Ready on http://localhost:8000
 12:26:59  INFO      main — 👋 Shutting down.
+12:27:01  INFO      main — 🚀 Voice Agent API starting...
+12:27:01  INFO      database — SQLite database ready: voice_agent.db
+12:27:01  INFO      main — ✅ Ready on http://localhost:8000
+12:29:58  INFO      main — 👋 Shutting down.
+12:29:59  INFO      main — 🚀 Voice Agent API starting...
+12:29:59  INFO      database — SQLite database ready: voice_agent.db
+12:29:59  INFO      main — ✅ Ready on http://localhost:8000

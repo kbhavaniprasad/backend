@@ -31,7 +31,7 @@ class Config:
     ).split(",")
 
     # ── Database ─────────────────────────────────────────────────────────────
-    DB_PATH: str = os.getenv("DB_PATH", "voice_agent.db")
+    DB_PATH: str = os.getenv("DB_PATH", "/tmp/voice_agent.db" if os.getenv("VERCEL") else "voice_agent.db")
 
     # ── Rate limiting ─────────────────────────────────────────────────────────
     RATE_LIMIT_REQUESTS: int = int(os.getenv("RATE_LIMIT_REQUESTS", "20"))

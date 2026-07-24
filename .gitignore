@@ -1,0 +1,14 @@
+# JavaScript dependencies and generated frontend files
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Python virtual environments and generated files
+backend/venv/
+backend/__pycache__/
+*.py[cod]
+
+# Local secrets, data, and logs
+.env
+*.db
+*.log
