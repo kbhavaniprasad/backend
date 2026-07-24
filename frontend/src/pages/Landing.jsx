@@ -50,6 +50,22 @@ const S = {
     flexWrap: 'wrap',
     justifyContent: 'center',
   },
+  modalOverlay: {
+    position: 'fixed',
+    inset: 0,
+    zIndex: 1000,
+    padding: '24px 16px',
+    overflowY: 'auto',
+    background: 'rgba(0,0,0,0.72)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+  },
+  modal: {
+    width: '100%',
+    maxWidth: '640px',
+    margin: '32px 0',
+  },
   card: {
     background: 'rgba(255,255,255,0.03)',
     border: '1px solid var(--border)',
@@ -193,16 +209,35 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Registration Form Card */}
-      {showRegistrationForm && <div style={S.card}>
+      {/* Registration Form Popup */}
+      {showRegistrationForm && <div
+        style={S.modalOverlay}
+        onClick={() => !loading && setShowRegistrationForm(false)}
+      >
+        <div
+          style={{ ...S.card, ...S.modal }}
+          onClick={(event) => event.stopPropagation()}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="registration-form-title"
+        >
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{ fontSize: '2rem' }}>📋</div>
           <div>
-            <h2 style={{ fontSize: '1.4rem', fontWeight: 700 }}>Lead Registration Form</h2>
+            <h2 id="registration-form-title" style={{ fontSize: '1.4rem', fontWeight: 700 }}>Lead Registration Form</h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
               Fill in customer details to analyze, score, and store the lead in the Admin Dashboard.
             </p>
           </div>
+          <button
+            type="button"
+            aria-label="Close registration form"
+            onClick={() => setShowRegistrationForm(false)}
+            disabled={loading}
+            style={{ marginLeft: 'auto', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', fontSize: '1.5rem' }}
+          >
+            ×
+          </button>
         </div>
 
         <form style={S.form} onSubmit={handleFormSubmit}>
@@ -290,6 +325,7 @@ export default function Landing() {
             </div>
           )}
         </form>
+        </div>
       </div>}
 
       {/* Agent 2 Supervisor Feature Highlights */}
