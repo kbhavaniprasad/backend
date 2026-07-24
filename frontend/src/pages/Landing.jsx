@@ -110,6 +110,7 @@ export default function Landing() {
   });
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState('');
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -171,7 +172,7 @@ export default function Landing() {
           Connect with an AI voice sales rep instantly via WebRTC audio. Agent 2 (Supervisor AI) monitors and evaluates transcripts after call completion.
         </p>
 
-        {/* Instant Voice Call CTA */}
+        {/* Demo CTAs */}
         <div style={S.ctaBox}>
           <button
             className="btn btn-primary"
@@ -179,13 +180,21 @@ export default function Landing() {
             onClick={handleInstantVoiceCall}
             disabled={loading}
           >
-            🎙️ Start Instant AI Voice Call Now →
+            Get a Free Demo 1
+          </button>
+          <button
+            className="btn btn-ghost"
+            style={{ padding: '16px 36px', fontSize: '1.1rem' }}
+            onClick={() => setShowRegistrationForm(true)}
+            disabled={loading}
+          >
+            Get a Free Demo 2
           </button>
         </div>
       </section>
 
       {/* Registration Form Card */}
-      <div style={S.card}>
+      {showRegistrationForm && <div style={S.card}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{ fontSize: '2rem' }}>📋</div>
           <div>
@@ -281,7 +290,7 @@ export default function Landing() {
             </div>
           )}
         </form>
-      </div>
+      </div>}
 
       {/* Agent 2 Supervisor Feature Highlights */}
       <div
