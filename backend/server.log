@@ -1,0 +1,96 @@
+23:13:29  INFO      main — 🚀 Voice Agent API starting...
+23:13:29  INFO      database — SQLite database ready: voice_agent.db
+23:13:29  INFO      main — ✅ Ready on http://localhost:8000
+23:21:13  INFO      httpx — HTTP Request: POST https://api.retellai.com/v2/create-web-call "HTTP/1.1 201 Created"
+23:21:13  INFO      voice — Web call created  call_id=call_11ac9421a95289a56b774450111  agent=agent_07c2193d4c8f9303558c9d7f8a
+23:32:07  INFO      main — 👋 Shutting down.
+23:32:09  INFO      main — 🚀 Voice Agent API starting...
+23:32:09  INFO      database — SQLite database ready: voice_agent.db
+23:32:09  INFO      main — ✅ Ready on http://localhost:8000
+23:32:20  INFO      main — 👋 Shutting down.
+23:32:22  INFO      main — 🚀 Voice Agent API starting...
+23:32:22  INFO      database — SQLite database ready: voice_agent.db
+23:32:22  INFO      main — ✅ Ready on http://localhost:8000
+23:32:51  INFO      main — 👋 Shutting down.
+23:32:51  INFO      main — 🚀 Voice Agent API starting...
+23:32:51  INFO      database — SQLite database ready: voice_agent.db
+23:32:51  INFO      main — ✅ Ready on http://localhost:8000
+23:33:47  INFO      main — 👋 Shutting down.
+23:33:48  INFO      main — 🚀 Voice Agent API starting...
+23:33:48  INFO      database — SQLite database ready: voice_agent.db
+23:33:48  INFO      main — ✅ Ready on http://localhost:8000
+23:42:43  INFO      main — 👋 Shutting down.
+23:42:44  INFO      main — 🚀 Voice Agent API starting...
+23:42:44  INFO      database — SQLite database ready: voice_agent.db
+23:42:44  INFO      main — ✅ Ready on http://localhost:8000
+23:42:58  INFO      main — 👋 Shutting down.
+23:42:59  INFO      main — 🚀 Voice Agent API starting...
+23:42:59  INFO      database — SQLite database ready: voice_agent.db
+23:42:59  INFO      main — ✅ Ready on http://localhost:8000
+23:43:04  INFO      main — 👋 Shutting down.
+23:43:05  INFO      main — 🚀 Voice Agent API starting...
+23:43:05  INFO      database — SQLite database ready: voice_agent.db
+23:43:05  INFO      main — ✅ Ready on http://localhost:8000
+23:43:14  INFO      main — 👋 Shutting down.
+23:43:15  INFO      main — 🚀 Voice Agent API starting...
+23:43:15  INFO      database — SQLite database ready: voice_agent.db
+23:43:15  INFO      main — ✅ Ready on http://localhost:8000
+23:43:20  INFO      main — 👋 Shutting down.
+23:43:21  INFO      main — 🚀 Voice Agent API starting...
+23:43:21  INFO      database — SQLite database ready: voice_agent.db
+23:43:21  INFO      main — ✅ Ready on http://localhost:8000
+23:48:31  ERROR     api — Failed to save lead: NOT NULL constraint failed: leads.email
+23:48:38  ERROR     api — Failed to save lead: NOT NULL constraint failed: leads.email
+23:49:38  ERROR     api — Failed to save lead: NOT NULL constraint failed: leads.email
+23:51:15  INFO      main — 👋 Shutting down.
+23:51:16  INFO      main — 🚀 Voice Agent API starting...
+23:51:16  INFO      database — SQLite database ready: voice_agent.db
+23:51:16  INFO      main — ✅ Ready on http://localhost:8000
+23:51:30  INFO      httpx — HTTP Request: POST http://test/api/leads "HTTP/1.1 200 OK"
+23:51:43  INFO      main — 👋 Shutting down.
+23:51:45  INFO      main — 🚀 Voice Agent API starting...
+23:51:45  INFO      database — SQLite database ready: voice_agent.db
+23:51:45  INFO      main — ✅ Ready on http://localhost:8000
+23:51:56  INFO      httpx — HTTP Request: POST http://test/api/trigger-agent "HTTP/1.1 200 OK"
+23:52:03  INFO      httpx — HTTP Request: POST https://api.retellai.com/v2/create-web-call "HTTP/1.1 201 Created"
+23:52:03  INFO      voice — Web call created  call_id=call_cf71210a3634dd6d328ff44c2b4  agent=agent_07c2193d4c8f9303558c9d7f8a
+23:52:03  INFO      httpx — HTTP Request: POST http://test/api/trigger-agent "HTTP/1.1 200 OK"
+23:52:37  INFO      httpx — HTTP Request: POST https://api.retellai.com/v2/create-web-call "HTTP/1.1 201 Created"
+23:52:37  INFO      voice — Web call created  call_id=call_f9fdf7af580f53dd1c635fc9b3f  agent=agent_07c2193d4c8f9303558c9d7f8a
+23:54:59  INFO      main — 👋 Shutting down.
+23:55:00  INFO      main — 🚀 Voice Agent API starting...
+23:55:00  INFO      database — SQLite database ready: voice_agent.db
+23:55:00  INFO      main — ✅ Ready on http://localhost:8000
+23:55:38  INFO      httpx — HTTP Request: POST http://test/api/voice/stop "HTTP/1.1 200 OK"
+23:56:38  INFO      httpx — HTTP Request: POST https://api.retellai.com/v2/create-web-call "HTTP/1.1 201 Created"
+23:56:38  INFO      voice — Web call created  call_id=call_0aad73367df7d227db93be10c75  agent=agent_07c2193d4c8f9303558c9d7f8a
+23:59:27  INFO      httpx — HTTP Request: POST https://api.retellai.com/v2/create-web-call "HTTP/1.1 201 Created"
+23:59:27  INFO      voice — Web call created  call_id=call_b61f5670075cf97f1c474ccf134  agent=agent_07c2193d4c8f9303558c9d7f8a
+23:59:28  INFO      httpx — HTTP Request: POST https://api.retellai.com/v2/create-web-call "HTTP/1.1 201 Created"
+23:59:28  INFO      voice — Web call created  call_id=call_250d0a937bc281f467397ebc3e4  agent=agent_07c2193d4c8f9303558c9d7f8a
+11:42:09  INFO      main — 🚀 Voice Agent API starting...
+11:42:09  INFO      database — SQLite database ready: voice_agent.db
+11:42:09  INFO      main — ✅ Ready on http://localhost:8000
+11:46:29  INFO      main — 👋 Shutting down.
+11:46:30  INFO      main — 🚀 Voice Agent API starting...
+11:46:30  INFO      database — SQLite database ready: voice_agent.db
+11:46:30  INFO      main — ✅ Ready on http://localhost:8000
+11:46:34  INFO      main — 👋 Shutting down.
+11:46:35  INFO      main — 🚀 Voice Agent API starting...
+11:46:35  INFO      database — SQLite database ready: voice_agent.db
+11:46:35  INFO      main — ✅ Ready on http://localhost:8000
+11:46:41  INFO      main — 👋 Shutting down.
+11:46:42  INFO      main — 🚀 Voice Agent API starting...
+11:46:42  INFO      database — SQLite database ready: voice_agent.db
+11:46:42  INFO      main — ✅ Ready on http://localhost:8000
+11:46:51  INFO      main — 👋 Shutting down.
+11:46:52  INFO      main — 🚀 Voice Agent API starting...
+11:46:52  INFO      database — SQLite database ready: voice_agent.db
+11:46:52  INFO      main — ✅ Ready on http://localhost:8000
+11:46:56  INFO      main — 👋 Shutting down.
+11:46:58  INFO      main — 🚀 Voice Agent API starting...
+11:46:58  INFO      database — SQLite database ready: voice_agent.db
+11:46:58  INFO      main — ✅ Ready on http://localhost:8000
+11:48:05  INFO      httpx — HTTP Request: POST https://api.retellai.com/v2/create-web-call "HTTP/1.1 201 Created"
+11:48:05  INFO      voice — Web call created  call_id=call_5cb7f5245d9183a37bf196a5356  agent=agent_07c2193d4c8f9303558c9d7f8a
+12:14:14  INFO      main — 👋 Shutting down.
