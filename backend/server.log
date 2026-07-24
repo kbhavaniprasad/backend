@@ -94,3 +94,17 @@
 11:48:05  INFO      httpx — HTTP Request: POST https://api.retellai.com/v2/create-web-call "HTTP/1.1 201 Created"
 11:48:05  INFO      voice — Web call created  call_id=call_5cb7f5245d9183a37bf196a5356  agent=agent_07c2193d4c8f9303558c9d7f8a
 12:14:14  INFO      main — 👋 Shutting down.
+12:14:16  INFO      main — 🚀 Voice Agent API starting...
+12:14:16  INFO      database — SQLite database ready: voice_agent.db
+12:14:16  INFO      main — ✅ Ready on http://localhost:8000
+12:24:00  INFO      httpx — HTTP Request: POST https://api.retellai.com/v2/create-web-call "HTTP/1.1 201 Created"
+12:24:00  INFO      voice — Web call created  call_id=call_f8466bc3d7418c42effcf02ae1a  agent=agent_07c2193d4c8f9303558c9d7f8a
+12:26:47  INFO      main — 👋 Shutting down.
+12:26:48  INFO      main — 🚀 Voice Agent API starting...
+12:26:48  INFO      database — SQLite database ready: voice_agent.db
+12:26:48  INFO      main — ✅ Ready on http://localhost:8000
+12:26:53  INFO      main — 👋 Shutting down.
+12:26:54  INFO      main — 🚀 Voice Agent API starting...
+12:26:54  INFO      database — SQLite database ready: voice_agent.db
+12:26:54  INFO      main — ✅ Ready on http://localhost:8000
+12:26:59  INFO      main — 👋 Shutting down.

@@ -52,6 +52,9 @@ export default function Navbar() {
         <Link to="/" style={S.link(location.pathname === '/')}>
           Lead Registration
         </Link>
+        <Link to="/voice" style={S.link(location.pathname === '/voice')}>
+          🎙️ Instant Voice Call
+        </Link>
         <Link to="/dashboard" style={S.link(location.pathname === '/dashboard')}>
           Admin Dashboard
         </Link>

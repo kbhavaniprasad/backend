@@ -4,7 +4,7 @@ import { createLead } from '../services/api';
 
 const S = {
   container: {
-    maxWidth: '850px',
+    maxWidth: '950px',
     margin: '0 auto',
     padding: '40px 20px 80px',
     display: 'flex',
@@ -42,6 +42,13 @@ const S = {
     fontSize: '1.15rem',
     color: 'var(--text-muted)',
     maxWidth: '650px',
+  },
+  ctaBox: {
+    display: 'flex',
+    gap: '16px',
+    marginTop: '12px',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
   },
   card: {
     background: 'rgba(255,255,255,0.03)',
@@ -108,6 +115,22 @@ export default function Landing() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleInstantVoiceCall = async () => {
+    try {
+      setLoading(true);
+      await createLead({
+        name: 'Instant Voice Visitor',
+        source: 'instant',
+        agent_type: 'voice',
+      });
+      navigate('/voice?autostart=true');
+    } catch (err) {
+      alert('Error triggering Voice Agent: ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name) return alert('Please enter your name');
@@ -139,14 +162,26 @@ export default function Landing() {
       {/* Hero Section */}
       <section style={S.hero}>
         <div style={S.badge}>
-          ⚡ AI Lead Capture & Supervisor Quality Assurance
+          🎙️ Retell AI Voice Agent & Agent 2 Supervisor
         </div>
         <h1 style={S.title}>
-          Register & Qualify Leads Instantly
+          Instant AI Voice Calls & Automated Lead Qualification
         </h1>
         <p style={S.subtitle}>
-          Submit lead information directly into the system. Agent 2 (Supervisor AI) evaluates requirement intent, quality scores, and lead status automatically.
+          Connect with an AI voice sales rep instantly via WebRTC audio. Agent 2 (Supervisor AI) monitors and evaluates transcripts after call completion.
         </p>
+
+        {/* Instant Voice Call CTA */}
+        <div style={S.ctaBox}>
+          <button
+            className="btn btn-primary"
+            style={{ padding: '16px 36px', fontSize: '1.1rem' }}
+            onClick={handleInstantVoiceCall}
+            disabled={loading}
+          >
+            🎙️ Start Instant AI Voice Call Now →
+          </button>
+        </div>
       </section>
 
       {/* Registration Form Card */}
@@ -226,7 +261,7 @@ export default function Landing() {
 
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn btn-ghost"
             style={{ width: '100%', padding: '16px', fontSize: '1rem', marginTop: '8px' }}
             disabled={loading}
           >
@@ -259,9 +294,9 @@ export default function Landing() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           <span style={{ fontSize: '2.4rem' }}>👁️</span>
           <div>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Agent 2 (Supervisor AI) Lead Classification</h3>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Agent 2 (Supervisor AI) Transcript Evaluation</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '4px' }}>
-              Upon registration, Agent 2 automatically categorizes leads into status buckets (<code>Deal Closed</code>, <code>Interested</code>, <code>Review Later</code>, <code>Just Talked</code>, <code>Not Interested</code>) and computes quality scores.
+              When a voice call completes, Agent 2 processes the full Retell AI transcript, categorizes lead status (<code>Deal Closed</code>, <code>Interested</code>, <code>Review Later</code>, <code>Just Talked</code>, <code>Not Interested</code>), and logs it into the Admin Dashboard.
             </p>
           </div>
         </div>

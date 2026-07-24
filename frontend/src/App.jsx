@@ -6,6 +6,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Landing from './pages/Landing';
+import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/voice" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
